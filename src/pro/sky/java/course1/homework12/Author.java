@@ -17,5 +17,27 @@ public class Author {
 		return secondName;
 	}
 
+	@Override
+	public String toString() {
+		return "Автор: " + firstName + " " + secondName;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == this) {
+			return true;
+		}
+		if (obj == null || obj.getClass() != this.getClass()) {
+			return false;
+		}
+		Author author2 = (Author) obj;
+		return firstName.equals(author2.firstName) && secondName.equals(author2.secondName);
+	}
+
+	@Override
+	public int hashCode() {
+		return java.util.Objects.hash(firstName, secondName);
+
+	}
 }
 
