@@ -35,8 +35,8 @@ public class Book {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this.getClass() != obj.getClass()) {
-			return false;
+		if (this == obj) {
+			return true;
 		}
 		if (obj == null || obj.getClass() != this.getClass()) {
 			return false;
